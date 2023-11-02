@@ -174,9 +174,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/hsv"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="128dp"
             android:layout_marginStart="34dp"
-            app:layout_constraintBottom_toBottomOf="@id/ll_bg"
             app:layout_constraintTop_toTopOf="@id/ll_bg"
             app:layout_constraintStart_toStartOf="@id/ll_bg"
             app:layout_constraintEnd_toEndOf="@id/ll_bg"/>

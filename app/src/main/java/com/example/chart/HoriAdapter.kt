@@ -26,10 +26,12 @@ class HoriAdapter(
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         if (holder is ItemVH) {
-            list[position]?.let {
-                holder.binding.level.layoutParams.height =( (it.sys - it.dia)  * height / (max - min)).dp2px(context)
-                holder.binding.level.translationY = (((max + min)/2f - (it.sys + it.dia)/2f )* height /(max - min).toFloat()).dp2px(context)
-                Log.e("record","height = ${height} position = ${position} sys = ${it.sys} dia = ${it.dia} trans = ${holder.binding.level.translationY } height = ${holder.binding.level.layoutParams.height}")
+            list[position].let {
+                val h =(it.sys - it.dia)  / (max - min).toFloat()
+                val translationY = (((max + min)/2f - (it.sys + it.dia)/2f )/(max - min).toFloat())
+                holder.binding.level.layoutParams.height = (holder.binding.level.layoutParams.height * h).toInt()
+                holder.binding.level.translationY = (translationY * height).dp2px(context)
+                Log.e("record","height = ${h} position = ${position} sys = ${it.sys} dia = ${it.dia} trans = ${translationY } ")
                 var color = R.color.result_0
 
                 when (it.level) {

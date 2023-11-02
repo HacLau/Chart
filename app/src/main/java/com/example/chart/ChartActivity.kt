@@ -1,33 +1,10 @@
 package com.example.chart
 
-import android.graphics.Color
-import android.graphics.Paint
-import android.graphics.Typeface
 import android.os.Bundle
-import android.util.DisplayMetrics
-import android.util.Log
-import android.view.View
-import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.chart.databinding.ActivityChartBinding
-import com.example.chart.databinding.LayoutChartBinding
-import com.github.mikephil.charting.charts.BarChart
-import com.github.mikephil.charting.components.Description
-import com.github.mikephil.charting.components.Legend
-import com.github.mikephil.charting.components.XAxis
-import com.github.mikephil.charting.components.YAxis
-import com.github.mikephil.charting.data.BarData
-import com.github.mikephil.charting.data.BarDataSet
-import com.github.mikephil.charting.data.BarEntry
-import com.github.mikephil.charting.data.Entry
-import com.github.mikephil.charting.formatter.IAxisValueFormatter
-import com.github.mikephil.charting.formatter.IValueFormatter
-import com.github.mikephil.charting.interfaces.datasets.IBarDataSet
-import com.github.mikephil.charting.utils.Utils
-import com.github.mikephil.charting.utils.ViewPortHandler
-import java.text.DecimalFormat
+import kotlin.math.max
 
 
 class ChartActivity : AppCompatActivity() {
@@ -52,7 +29,7 @@ class ChartActivity : AppCompatActivity() {
                 minNumber = it.dia
             }
         }
-        binding.hsv.adapter = HoriAdapter(this, chartList,116,maxNumber,minNumber)
+        binding.hsv.adapter = HoriAdapter(this, chartList,116, maxNumber,minNumber)
 
         binding.let {
             it.numMax.text = "$maxNumber"
