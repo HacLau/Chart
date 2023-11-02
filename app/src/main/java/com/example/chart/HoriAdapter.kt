@@ -28,9 +28,9 @@ class HoriAdapter(
         if (holder is ItemVH) {
             list[position].let {
                 val h =(it.sys - it.dia)  / (max - min).toFloat()
-                val translationY = (((max + min)/2f - (it.sys + it.dia)/2f )/(max - min).toFloat())
-                holder.binding.level.layoutParams.height = (holder.binding.level.layoutParams.height * h).toInt()
-                holder.binding.level.translationY = (translationY * height).dp2px(context)
+                val translationY = (((max + min)/2f - (it.sys + it.dia)/2f ) /(max - min).toFloat())
+                holder.binding.level.layoutParams.height = (232 * h).toInt()
+                holder.binding.level.translationY = (translationY * 232)
                 Log.e("record","height = ${h} position = ${position} sys = ${it.sys} dia = ${it.dia} trans = ${translationY } ")
                 var color = R.color.result_0
 
