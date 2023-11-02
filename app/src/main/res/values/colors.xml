@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="color_gray">#333333</color>
+    <color name="color_red">#FF0000</color>
+    <color name="color_greed">#00FF00</color>
+    <color name="color_blue">#0000ff</color>
+    <color name="color_content_title">#000000</color>
+
+    <color name="level_0">#FFeeee</color>
+    <color name="level_1">#FFbbbb</color>
+    <color name="level_2">#FF9999</color>
+    <color name="level_3">#FF6666</color>
+    <color name="level_4">#FF3333</color>
+    <color name="level_5">#FF0000</color>
+
+
+    <color name="result_0">#0199EB</color>
+    <color name="result_1">#56D047</color>
+    <color name="result_2">#FED336</color>
+    <color name="result_3">#FFB968</color>
+    <color name="result_4">#FF8767</color>
+    <color name="result_5">#FE5E56</color>
+</resources>
